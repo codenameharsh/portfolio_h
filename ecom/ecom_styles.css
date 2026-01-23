@@ -1,11 +1,196 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap'); */
-@import url(/style.css);
+/* common styles */
+
+/* Custom Palette Variables */
+:root {
+    --bg-cream: #FFF9F4;
+    --grey-text: #585858;
+    --red-accent: #D14D4D;
+    --bg-black: #000000;
+    --cream: #FFF9F4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-cream);
+    color: var(--grey-text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.section {
+  margin-top: 5rem;
+}
+
+/* Progress bar */
+/* Container: The background of the progress bar */
+.progress-container {
+  width: 100%;
+  height: 4px; /* Thin and elegant */
+  background: transparent; /* Blends with your navbar/bg */
+  position: fixed;
+  top: 0; /* Or adjust to sit below your sticky nav */
+  z-index: 1001; /* Ensure it stays above the navbar */
+}
+
+/* The actual bar: Uses your red accent #D14D4D */
+.progress-bar {
+  height: 4px;
+  background: #D14D4D;
+  width: 0%; /* Initial state */
+  transition: width 0.1s ease-out;
+}
+
+/* --- Navigation --- */
+.logo{
+  cursor: pointer;
+}
+
+.logo:hover{
+  transform: translateY(2px);
+  transform: scale(1.25);
+}
+.navbar {
+    width: 100%;
+    padding: 1.5rem 10%; /* Slightly reduced padding for better scroll feel */
+    position: fixed;     /* Changed from absolute to fixed */
+    top: 0;
+    left: 0;
+    z-index: 1000;       /* Ensures it stays above all other content */
+    background-color: rgba(255, 249, 244, 0.95); /* Using #FFF9F4 with slight transparency */
+    backdrop-filter: blur(10px); /* Modern frosted glass effect */
+    transition: all 0.3s ease;   /* Smooth transition for any scroll effects */
+    /* border-bottom: 1px solid rgba(88, 88, 88, 0.1); */
+    box-shadow:rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--grey-text);
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
+
+
+.nav-links :hover{
+ color: #D14D4D;
+ transform: translateY(-2px);
+ font-size: 0.9rem;
+ transition: transform 0.2s ease;
+}
+
+
+/* --- Responsive Styles --- */
+
+/* --- Hamburger Menu Icon --- */
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    z-index: 1001; /* Stays above the overlay */
+}
+
+.bar {
+    width: 25px;
+    height: 2px;
+    background-color: var(--grey-text); /* #585858 */
+    transition: all 0.3s ease;
+}
+
+/* --- Mobile Menu Logic (Under 768px) --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Show icon on mobile */
+    }
+
+    .nav-links {
+        position: fixed;
+        right: -100%; /* Hidden off-screen */
+        top: 0;
+        flex-direction: column;
+        background-color: rgba(255, 249, 244, 0.98); /* #FFF9F4 */
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        transition: 0.4s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        right: 0; /* Slide in */
+    }
+
+    .nav-links a {
+        font-size: 1.5rem; /* Large links for touch */
+    }
+
+    /* Animation: Hamburger to 'X' */
+    .menu-toggle.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        background-color: var(--red-accent); /* #D14D4D */
+    }
+    .menu-toggle.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: var(--red-accent);
+    }
+}
+
+/* For Tablets (Screens smaller than 1024px) */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 1.5rem 5%;
+    }
+
+
+    .nav-links {
+        gap: 1.5rem; /* Tighten navigation spacing */
+    }
+}
+
+
+
+/* For Mobile Phones (Screens smaller than 480px) */
+@media (max-width: 480px) {
+.navbar .nav-links {
+        display: flex; /* Overriding your previous 'none' to allow the slide-in */
+    }
+
+    }
 
 
 
 
+/* case study styles */
 .case-study-hero {
   text-align: center;
+  margin-top: 5rem;
   padding: 60px 20px;
   background-color: #ffffff; /* Contrast against the #FFF9F4 tags */
   font-family: 'Arvo', serif;
