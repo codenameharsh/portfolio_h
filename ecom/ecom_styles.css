@@ -304,6 +304,7 @@ font-family: 'Playfair Display', serif;
   font-size: 0.9rem;
   font-weight: 700;
   display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 /* This forces the third tag to drop to a new line and center */
@@ -325,6 +326,7 @@ font-family: 'Playfair Display', serif;
 .card {
   padding: 36px;
   border: 1px solid #e9e2dc;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .dark {
@@ -453,6 +455,10 @@ blockquote {
 @media (max-width: 768px) {
   body {
     padding: 24px;
+  }
+
+  .title{
+    font-size: 3rem;
   }
 
   .grid {
@@ -811,11 +817,18 @@ blockquote {
 }
 .back-next{
   margin-top: 1rem;
+  text-transform: lowercase;
+  font-style: italic;
   display: flex;
   justify-content:space-between;
   gap: 30px;
   align-items: center;
 }
+
+/* .back-next-pointer{
+  font-size: 1.2rem;
+  align-items: center;
+} */
 
 .link {
   /* background-color: #585858; */
