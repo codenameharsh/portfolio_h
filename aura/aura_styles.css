@@ -564,7 +564,7 @@ li { margin-bottom: 10px; line-height: 1.4; }
 /* Key Insight */
 .key-insight { text-align: center; }
 .insight-title { letter-spacing: 2px; font-size: 1.5rem; margin-bottom: 15px; }
-.insight-quote { color: var(--red-accent); font-size: 1.4rem; margin-bottom: 10px; }
+.insight-quote { color: var(--red-accent); font-size: 1rem; margin-bottom: 10px; }
 
 /* Utilities */
 .italic-serif { font-style: italic; }
@@ -626,7 +626,7 @@ li { margin-bottom: 10px; line-height: 1.4; }
 .card {
     background: var(--bg-cream);
     padding: 20px;
-    box-shadow: var(--shadow);
+    /* box-shadow: var(--shadow); */
     color: var(--grey-text);
     font-size: 0.85rem;
     line-height: 1.5;
@@ -666,4 +666,303 @@ ul { padding-left: 0; list-style: none; margin: 10px 0; }
 @media (max-width: 768px) {
     .grid-layout { grid-template-columns: 1fr; }
     .span-2-wide, .span-2-high { grid-column: auto; grid-row: auto; }
+}
+
+
+
+.visual-dna-section {
+    padding: 50px 20px;
+    font-family: 'Inter', sans-serif;
+    color: var(--grey-text);
+}
+
+.dna-header { text-align: center; margin-bottom: 40px; }
+.dna-header h1 { font-family: 'Playfair Display', serif; font-style: italic; color: var(--red-accent); font-size: 1.8rem; margin: 0; }
+.dna-hr { width: 80px; height: 1px; background: var(--grey-text); margin: 15px auto; }
+.dna-header h2 { letter-spacing: 4px; font-size: 1.2rem; margin: 0; }
+
+/* The Grid - Mobile First */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Card Styles */
+.dna-card {
+    background: var(--bg-cream);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.no-padding { padding: 0; }
+.center { align-items: center; justify-content: center; min-height: 150px; }
+
+/* Responsive Overrides */
+@media (min-width: 769px) {
+    .grid-layout {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+    }
+
+    .span-2-wide {
+        grid-column: span 2;
+    }
+
+    .span-2-high {
+        grid-row: span 2;
+    }
+}
+
+/* Internal Elements */
+.label { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 10px; }
+.accent { color: var(--red-accent); font-family: 'Playfair Display', serif; font-style: italic; font-weight: 700; }
+.dna-list { padding-left: 20px; font-size: 0.9rem; line-height: 1.6; }
+.full-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.refinement-card{
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+/* exp design 2 */
+.aura-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
+  font-family: 'Inter', sans-serif;
+  color: var(--grey-text);
+}
+
+.aura-header {
+  text-align: center;
+  border-top: 1px solid var(--grey-text);
+  margin-bottom: 30px;
+  padding-top: 10px;
+}
+
+.aura-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: var(--red-accent);
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.aura-header h2 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 3px;
+  font-size: 1.5rem;
+  margin: 5px 0;
+}
+
+/* The Layout Grid */
+.aura-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.strategy-card {
+  background-color: var(--grey-text);
+  color:var(--bg-cream);
+  text-align: center;
+}
+
+.strategy-card h3 { letter-spacing: 4px; margin-bottom: 5px; }
+
+/* Typography */
+.playfair { font-family: 'Playfair Display', serif; }
+.italic { font-style: italic; }
+.accent-title { color: var(--red-accent); font-family: 'Playfair Display', serif; margin-top: 0; }
+.grey-title { font-family: 'Playfair Display', serif; font-weight: 700; margin-top: 0; }
+
+/* Images */
+.image-box img, .mockup-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  box-shadow: var(--shadow);
+}
+
+/* Layout Specifics */
+.mockup-box {
+  grid-row: span 2; /* Makes the website mockup vertical */
+}
+
+.feedback-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+ul { padding-left: 18px; line-height: 1.6; }
+
+@media (max-width: 768px) {
+  .aura-grid { grid-template-columns: 1fr; }
+  .mockup-box { grid-row: auto; }
+}
+
+
+
+
+.strategy-card {
+    background-color: var(--grey-text);
+    color: var(--bg-cream);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.strategy-card h3 {
+    letter-spacing: 3px;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+/* final outcome */
+.final-outcome {
+  max-width: 900px;
+  margin: 100px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.outcome-header {
+  margin-bottom: 60px;
+}
+
+.outcome-content{
+  font-size: 3rem;
+}
+
+.outcome-italic{
+  font-family: 'Playfair Display', serif;
+    font-style: italic;
+    /* font-weight: bold;; */
+}
+
+.outcome-sub{
+    font-size: 1.5rem;
+
+}
+
+.outcome-red{
+  font-family: 'Playfair Display', serif;
+    /* font-style: italic; */
+    font-weight: bold;
+    color: var(--red-accent);
+}
+
+
+.summary-text {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  color: #585858;
+  margin-bottom: 80px;
+  word-spacing: 5px;
+}
+
+/* The elegant Drop Cap "A" */
+.summary-text::first-letter {
+  font-style: normal;
+  font-size: 1.2em;
+  margin-right: 2px;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+}
+
+.btn {
+  background-color: #585858;
+  color: var(--bg-cream);
+  text-decoration: none;
+  padding: 20px 45px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn:hover {
+  background-color: var(--red-accent);
+}
+.back-next{
+  padding-top: 2rem ;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content:space-evenly;
+  gap: 30px;
+  align-items: center;
+}
+
+
+.link {
+  background-color: var(--bg-cream);
+    /* border: 3px solid #d14d4d1a; */
+  /* border-radius: 20px; */
+  /* border: 2px dashed var(--bg-cream); */
+  color:var(--red-accent);
+  text-decoration: none;
+  padding: .5rem 2rem;
+  font-weight: normal;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+}
+
+.link:hover {
+  background-color: #d14d4d;
+  color: var(--bg-cream);
+}
+
+
+/* Responsive Scaling */
+@media (max-width: 768px) {
+  .summary-text {
+    font-size: 2.2rem;
+  }
+  
+  .cta-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+
+
+
+/* --- Scroll Animation States --- */
+
+/* Initial hidden state: invisible and shifted down slightly */
+.reveal-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Active visible state */
+.reveal-active {
+    opacity: 1;
+    transform: translateY(0);
 }

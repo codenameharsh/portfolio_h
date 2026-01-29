@@ -865,3 +865,19 @@ blockquote {
     max-width: 300px;
   }
 }
+
+
+/* --- Scroll Animation States --- */
+
+/* Initial hidden state: invisible and shifted down slightly */
+.reveal-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Active visible state */
+.reveal-active {
+    opacity: 1;
+    transform: translateY(0);
+}
